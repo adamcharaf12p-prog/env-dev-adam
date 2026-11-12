@@ -20,3 +20,7 @@ Environnement de développement de Adam Charafeddine – B1 DEV, IFRAN.
 | Processeurs | 16                        |
 | Mémoire     | 7.6 Go                    |
 | Utilisateur | ADAM                      |
+
+## Historique
+
+Ce dossier est suivi avec Git depuis le sous-module 2.
