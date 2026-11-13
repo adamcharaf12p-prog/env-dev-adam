@@ -28,3 +28,5 @@
 | `rm -i`    | Demande confirmation avant suppression | `rm -i notes.txt`            |
 | `rmdir`    | Supprime un dossier vide               | `rmdir photos`               |
 | `rm -r`    | Supprime un dossier et son contenu     | `rm -r photos`               |
+
+## Branche
