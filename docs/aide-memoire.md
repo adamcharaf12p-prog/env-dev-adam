@@ -30,3 +30,7 @@
 | `rm -r`    | Supprime un dossier et son contenu     | `rm -r photos`               |
 
 ## Branche
+
+| Commande     | Ce qu'elle fait                 | Exemple      |
+| ------------ | ------------------------------- | ------------ |
+| `git branch` | liste les branches de mon depot | `git branch` |
