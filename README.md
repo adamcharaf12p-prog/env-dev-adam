@@ -1,4 +1,4 @@
-# env-dev-adam (B1 DEV, IFRAN)
+# env-dev-adam - Mon environnement de développement (B1 DEV, IFRAN)
 
 Environnement de développement de Adam Charafeddine – B1 DEV, IFRAN.
 
