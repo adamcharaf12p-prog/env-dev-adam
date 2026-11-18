@@ -1,36 +1,46 @@
 # Aide-mémoire du terminal Linux
 
-## 1. Se déplacer
+## les premières commandes
 
-| Commande   | Ce qu'elle fait                   | Exemple        |
-| ---------- | --------------------------------- | -------------- |
-| `pwd`      | Affiche le dossier où je suis     | `pwd`          |
-| `ls`       | Affiche les fichiers et dossiers  | `ls`           |
-| `ls -a`    | Affiche aussi les fichiers cachés | `ls -a`        |
-| `cd`       | Change de dossier                 | `cd Documents` |
-| `cd ..`    | Remonte au dossier précédent      | `cd ..`        |
-| `cd ~`     | Retourne au dossier personnel     | `cd ~`         |
-| `cd ~/dev` | Va dans le dossier dev            | `cd ~/dev`     |
+| Commande | Ce qu'elle fait               | Exemple        |
+| -------- | ----------------------------- | -------------- |
+| `whoami` | affiche le nom d'utilisateur  | `whoami`       |
+| `clear`  | efface l'ecran                | `clear`        |
+| `ls`     | affiche le contenu du dossier | `ls docs`      |
+| `echo`   | affiche un text               | `echo bonjour` |
 
-## 2. Fichiers et dossiers
+## Se déplacer
 
-| Commande   | Ce qu'elle fait                        | Exemple                      |
-| ---------- | -------------------------------------- | ---------------------------- |
-| `mkdir`    | Crée un dossier                        | `mkdir photos`               |
-| `mkdir -p` | Crée plusieurs dossiers                | `mkdir -p projet/images`     |
-| `touch`    | Crée un fichier vide                   | `touch notes.txt`            |
-| `echo`     | Écrit du texte dans un fichier         | `echo "Bonjour" > notes.txt` |
-| `cp`       | Copie un fichier                       | `cp notes.txt copie.txt`     |
-| `cp -r`    | Copie un dossier complet               | `cp -r projet sauvegarde`    |
-| `mv`       | Déplace un fichier                     | `mv notes.txt archives/`     |
-| `mv`       | Renomme un fichier                     | `mv notes.txt idees.txt`     |
-| `rm`       | Supprime un fichier                    | `rm notes.txt`               |
-| `rm -i`    | Demande confirmation avant suppression | `rm -i notes.txt`            |
-| `rmdir`    | Supprime un dossier vide               | `rmdir photos`               |
-| `rm -r`    | Supprime un dossier et son contenu     | `rm -r photos`               |
+| Commande | Ce qu'elle fait               | Exemple                |
+| -------- | ----------------------------- | ---------------------- |
+| `pwd`    | Affiche le dossier ou je suis | `pwd`                  |
+| `cd`     | Change de dossier             | `cd ~/dev`             |
+| `mv`     | deplace un fichier            | `mv note.txt archive/` |
 
-## Branche
+## Fichiers et dossiers
 
-| Commande     | Ce qu'elle fait                 | Exemple      |
-| ------------ | ------------------------------- | ------------ |
-| `git branch` | liste les branches de mon depot | `git branch` |
+| Commande | Ce qu'elle fait     | Exemple          |
+| -------- | ------------------- | ---------------- |
+| `cp`     | Copie un fichier    | `cp a.txt b.txt` |
+| `mkdir`  | creer un dossier    | `mkdir photo`    |
+| `rm`     | supprime un fichier | `rn note.txt`    |
+| `touch`  | cree un fichier     | `touch life.txt` |
+
+## Lire et chercher
+
+| Commande | Ce qu'elle fait                  | Exemple                  |
+| -------- | -------------------------------- | ------------------------ |
+| `cat`    | affiche tout le fichier          | cat notes.txt            |
+| `grep`   | recherche un mot dans un fichier | `grep ERROR app.log`     |
+| `less`   | affiche le fichier page par page | `less unit.txt`          |
+| `head`   | affiche les premiere ligne       | `head note.txt`          |
+| `tail`   | affiche les derniere ligne       | `tail note.txt`          |
+| `find`   | retrouve un fichier par son nom  | `lind . -name "facture"` |
+
+## Branch
+
+| Commande     | Ce qu'elle fait                                   | Exemple                       |
+| ------------ | ------------------------------------------------- | ----------------------------- |
+| `git branch` | liste les branche de mon depot                    | `git branch`                  |
+| `git switch` | creer une nouvelle branch et se positionne dessus | `git switch -c ajout-section` |
+| `git merge`  | fusionne une branch a la branch ou vous etes      | `git merge ajout-section`     |
