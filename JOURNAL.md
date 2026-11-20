@@ -19,3 +19,9 @@
 - **Autres possibilités :** neant
 - **Raison :**GitHub se distingue par sa capacité à héberger des ligne de code
   permettant aux developpeurs de partager et d'ameliorer le code ensemble
+
+## 2026-11-20 - Création des scripts d'installation et de vérification
+
+- **Décision :** créer des scripts Bash pour installer et vérifier les outils de développement.
+- **Autres possibilités :** exécuter chaque commande manuellement dans le terminal.
+- **Raison :** automatiser les tâches pour gagner du temps et faciliter la réinstallation de mon environnement de développement.
