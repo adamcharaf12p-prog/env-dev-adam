@@ -1,46 +1,63 @@
 # Aide-mémoire du terminal Linux
 
-## les premières commandes
+## Les premières commandes
 
 | Commande | Ce qu'elle fait               | Exemple        |
 | -------- | ----------------------------- | -------------- |
-| `whoami` | affiche le nom d'utilisateur  | `whoami`       |
-| `clear`  | efface l'ecran                | `clear`        |
-| `ls`     | affiche le contenu du dossier | `ls docs`      |
-| `echo`   | affiche un text               | `echo bonjour` |
+| `whoami` | Affiche le nom d'utilisateur  | `whoami`       |
+| `clear`  | Efface l'écran du terminal    | `clear`        |
+| `ls`     | Affiche le contenu du dossier | `ls docs`      |
+| `echo`   | Affiche un texte              | `echo bonjour` |
 
 ## Se déplacer
 
 | Commande | Ce qu'elle fait               | Exemple                |
 | -------- | ----------------------------- | ---------------------- |
-| `pwd`    | Affiche le dossier ou je suis | `pwd`                  |
+| `pwd`    | Affiche le dossier actuel     | `pwd`                  |
 | `cd`     | Change de dossier             | `cd ~/dev`             |
-| `mv`     | deplace un fichier            | `mv note.txt archive/` |
+| `mv`     | Déplace ou renomme un fichier | `mv note.txt archive/` |
 
 ## Fichiers et dossiers
 
-| Commande | Ce qu'elle fait     | Exemple          |
-| -------- | ------------------- | ---------------- |
-| `cp`     | Copie un fichier    | `cp a.txt b.txt` |
-| `mkdir`  | creer un dossier    | `mkdir photo`    |
-| `rm`     | supprime un fichier | `rn note.txt`    |
-| `touch`  | cree un fichier     | `touch life.txt` |
+| Commande | Ce qu'elle fait          | Exemple              |
+| -------- | ------------------------ | -------------------- |
+| `cp`     | Copie un fichier         | `cp a.txt b.txt`     |
+| `mkdir`  | Crée un dossier          | `mkdir photo`        |
+| `rm`     | Supprime un fichier      | `rm note.txt`        |
+| `touch`  | Crée un fichier vide     | `touch liste.txt`    |
+| `rmdir`  | Supprime un dossier vide | `rmdir ancien`       |
+| `chmod`  | Modifie les permissions  | `chmod +x script.sh` |
 
 ## Lire et chercher
 
 | Commande | Ce qu'elle fait                  | Exemple                  |
 | -------- | -------------------------------- | ------------------------ |
-| `cat`    | affiche tout le fichier          | cat notes.txt            |
-| `grep`   | recherche un mot dans un fichier | `grep ERROR app.log`     |
-| `less`   | affiche le fichier page par page | `less unit.txt`          |
-| `head`   | affiche les premiere ligne       | `head note.txt`          |
-| `tail`   | affiche les derniere ligne       | `tail note.txt`          |
-| `find`   | retrouve un fichier par son nom  | `lind . -name "facture"` |
+| `cat`    | Affiche le contenu d'un fichier  | `cat notes.txt`          |
+| `grep`   | Recherche un mot dans un fichier | `grep ERROR app.log`     |
+| `less`   | Affiche un fichier page par page | `less notes.txt`         |
+| `head`   | Affiche les premières lignes     | `head notes.txt`         |
+| `tail`   | Affiche les dernières lignes     | `tail notes.txt`         |
+| `find`   | Recherche un fichier par son nom | `find . -name "facture"` |
 
-## Branch
+## Gestion du système
 
-| Commande     | Ce qu'elle fait                                   | Exemple                       |
-| ------------ | ------------------------------------------------- | ----------------------------- |
-| `git branch` | liste les branche de mon depot                    | `git branch`                  |
-| `git switch` | creer une nouvelle branch et se positionne dessus | `git switch -c ajout-section` |
-| `git merge`  | fusionne une branch a la branch ou vous etes      | `git merge ajout-section`     |
+| Commande      | Ce qu'elle fait                                     | Exemple                 |
+| ------------- | --------------------------------------------------- | ----------------------- |
+| `sudo`        | Exécute une commande avec les droits administrateur | `sudo apt update`       |
+| `apt update`  | Actualise la liste des paquets                      | `sudo apt update`       |
+| `apt install` | Installe un logiciel                                | `sudo apt install tree` |
+| `apt remove`  | Désinstalle un logiciel                             | `sudo apt remove tree`  |
+| `df -h`       | Affiche l'espace disque disponible                  | `df -h`                 |
+| `du -sh`      | Affiche la taille d'un dossier                      | `du -sh docs`           |
+| `ps`          | Affiche les processus en cours                      | `ps`                    |
+| `kill`        | Arrête un processus                                 | `kill 1234`             |
+| `history`     | Affiche l'historique des commandes                  | `history`               |
+| `man`         | Affiche le manuel d'une commande                    | `man ls`                |
+
+## Gestion des branches Git
+
+| Commande     | Ce qu'elle fait                               | Exemple                   |
+| ------------ | --------------------------------------------- | ------------------------- |
+| `git branch` | Liste les branches                            | `git branch`              |
+| `git switch` | Change de branche                             | `git switch main`         |
+| `git merge`  | Fusionne une branche dans la branche actuelle | `git merge ajout-section` |
