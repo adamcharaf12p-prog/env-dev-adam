@@ -63,6 +63,7 @@ Résultat attendu : une version pour Ubuntu, Git, Node.js, npm et tree.
 | `README.md`            | Cette documentation     |
 | `JOURNAL.md`           | Le journal de mes choix |
 | `docs/aide-memoire.md` | aide a me souvenir      |
+| `docs/reseau.md`       |                         |
 | `scripts/installer.sh` | installer outils        |
 | `scripts/verifier.sh`  | verification de poste   |
 
