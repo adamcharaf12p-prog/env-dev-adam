@@ -25,3 +25,9 @@
 - **Décision :** créer des scripts Bash pour installer et vérifier les outils de développement.
 - **Autres possibilités :** exécuter chaque commande manuellement dans le terminal.
 - **Raison :** automatiser les tâches pour gagner du temps et faciliter la réinstallation de mon environnement de développement.
+
+## 2026-11-20 - Amélioration de la fiche réseau
+
+- **Décision :** compléter la fiche réseau avec le trajet d'une requête HTTP et les codes de réponse.
+- **Autres possibilités :** laisser la fiche avec les informations précédentes.
+- **Raison :** mieux comprendre le fonctionnement d'Internet et conserver les notions importantes du cours.
