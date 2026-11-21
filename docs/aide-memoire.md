@@ -61,3 +61,8 @@
 | `git branch` | Liste les branches                            | `git branch`              |
 | `git switch` | Change de branche                             | `git switch main`         |
 | `git merge`  | Fusionne une branche dans la branche actuelle | `git merge ajout-section` |
+
+## Astuce de Noura
+ 
+`git log --oneline --graph` dessine l'historique avec les branches.
+ `tree ` Affiche l'organisation des dossiers et fichiers sous forme d'arborescence.
