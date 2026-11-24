@@ -1,3 +1,4 @@
+
 #!/bin/bash
 echo "=== Vérification du poste de adam ==="
 echo
@@ -11,5 +12,10 @@ echo "npm :"
 npm --version
 echo "tree :"
 tree --version
+echo
+echo "Python :"
+python3 --version
+echo "Accès à GitHub :"
+curl -sI https://github.com | head -n 1
 echo
 echo "=== Fin de la vérification ==="
