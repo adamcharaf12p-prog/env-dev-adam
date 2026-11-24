@@ -13,13 +13,13 @@ Environnement de développement de Adam Charafeddine – B1 DEV, IFRAN.
 
 ## Mon Ubuntu
 
-| Élément     | Valeur                    |
-| ----------- | ------------------------- |
-| Version     | Ubuntu Ubuntu 26.04.1 LTS |
-| Lancé avec  | WSL                       |
-| Processeurs | 16                        |
-| Mémoire     | 7.6 Go                    |
-| Utilisateur | ADAM                      |
+| Élément     | Valeur             |
+| ----------- | ------------------ |
+| Version     | Ubuntu 26.04.1 LTS |
+| Lancé avec  | WSL                |
+| Processeurs | 16                 |
+| Mémoire     | 7.6 Go             |
+| Utilisateur | ADAM               |
 
 ## Historique
 
@@ -40,32 +40,39 @@ Ce dossier est suivi avec Git depuis le sous-module 2.
 
 ### 1. Installer Ubuntu et VS Code
 
-- **Windows :** dans le Terminal (administrateur), taper `wsl --install`,
-  redémarrer, puis choisir un nom d'utilisateur et un mot de passe Ubuntu.
-- **Mac :** installer Homebrew depuis [brew.sh](https://brew.sh), puis taper
-  `brew install colima docker`, `colima start` et `colima ssh`.
+- **Windows :** dans le Terminal (administrateur), taper `wsl --install`, redémarrer, puis choisir un nom d'utilisateur et un mot de passe Ubuntu.
+- **Mac :** installer Homebrew depuis [brew.sh](https://brew.sh), puis taper `brew install colima docker`, `colima start` et `colima ssh`.
 - Installer VS Code depuis [code.visualstudio.com](https://code.visualstudio.com).
 
 ### 2. Installer les outils dans Ubuntu
 
-1. Ouvrir Ubuntu et aller dans le dossier du projet : `cd ~/dev/env-dev-kone`
+1. Ouvrir Ubuntu et aller dans le dossier du projet : `cd ~/dev/env-dev-adam`
 2. Lancer le script d'installation : `./scripts/installer.sh`
 
 ## Vérification
 
 Lancer `./scripts/verifier.sh` dans Ubuntu.
-Résultat attendu : une version pour Ubuntu, Git, Node.js, npm et tree.
+
+Résultat attendu :
+
+- Ubuntu : version installée.
+- Git : version installée.
+- Node.js : version installée.
+- npm : version installée.
+- tree : version installée.
+- Python : version installée.
+- Accès à GitHub : HTTP/2 200.
 
 ## Contenu du dossier
 
-| Fichier ou dossier     | Rôle                    |
-| ---------------------- | ----------------------- |
-| `README.md`            | Cette documentation     |
-| `JOURNAL.md`           | Le journal de mes choix |
-| `docs/aide-memoire.md` | aide a me souvenir      |
-| `docs/reseau.md`       |                         |
-| `scripts/installer.sh` | installer outils        |
-| `scripts/verifier.sh`  | verification de poste   |
+| Fichier ou dossier     | Rôle                       |
+| ---------------------- | -------------------------- |
+| `README.md`            | Cette documentation        |
+| `JOURNAL.md`           | Le journal de mes choix    |
+| `docs/aide-memoire.md` | Aide à me souvenir         |
+| `docs/reseau.md`       | Fiche réseau et diagnostic |
+| `scripts/installer.sh` | Installer les outils       |
+| `scripts/verifier.sh`  | Vérification du poste      |
 
 ## Historique
 
