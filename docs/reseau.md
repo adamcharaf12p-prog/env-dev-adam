@@ -17,32 +17,55 @@
 
 ## Les outils réseau
 
-| Commande                  | Ce qu'elle fait                                      |   
-| ------------------------- | ----------------------------------                   |
-| `hostname -I`             | Affiche l'adresse IP de mon Ubuntu                   |
-| `ping -c 4 <nom-du-site>` | Vérifie la connexion avec un site                    |
-| `nslookup <nom>`          | Affiche les adresses IP associées à un nom de domaine|
+| Commande                  | Ce qu'elle fait                                       |
+| ------------------------- | ----------------------------------------------------- |
+| `hostname -I`             | Affiche l'adresse IP de mon Ubuntu                    |
+| `ping -c 4 <nom-du-site>` | Vérifie la connexion avec un site                     |
+| `nslookup <nom>`          | Affiche les adresses IP associées à un nom de domaine |
 
 ## Le trajet d'une requête
 
 Quand je tape `https://github.com` dans mon navigateur :
 
-
-
-| Étape | Ce qui se passe | Ce qui peut mal tourner |
-|---|---|---|
-| 1. L'URL | Je tape `https://github.com` dans le navigateur, qui joue le rôle du client. | Une faute de frappe dans l'adresse. |
-| 2. Le DNS | Le navigateur demande au DNS l'adresse IP de `github.com`. Réponse : `140.82.121.3`. | Nom de domaine introuvable : `NXDOMAIN`. |
-| 3. La connexion | Le navigateur contacte le serveur de GitHub à l'adresse IP `140.82.121.3`. | Pas d'Internet, serveur indisponible ou connexion refusée. |
-| 4. La sécurité | Le serveur présente son certificat HTTPS. Le navigateur le vérifie et la connexion est chiffrée. | Certificat expiré ou nom incorrect. |
-| 5. La requête | Le navigateur envoie une requête HTTP `GET /` pour demander la page d'accueil. | Requête incorrecte ou refusée. |
-| 6. La réponse | Le serveur renvoie `200 OK` et la page HTML. Le navigateur l'affiche, puis demande les images et les styles. | Erreur HTTP `404`, `500`, etc. |
+| Étape           | Ce qui se passe                                                                                              | Ce qui peut mal tourner                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| 1. L'URL        | Je tape `https://github.com` dans le navigateur, qui joue le rôle du client.                                 | Une faute de frappe dans l'adresse.                        |
+| 2. Le DNS       | Le navigateur demande au DNS l'adresse IP de `github.com`. Réponse : `140.82.121.3`.                         | Nom de domaine introuvable : `NXDOMAIN`.                   |
+| 3. La connexion | Le navigateur contacte le serveur de GitHub à l'adresse IP `140.82.121.3`.                                   | Pas d'Internet, serveur indisponible ou connexion refusée. |
+| 4. La sécurité  | Le serveur présente son certificat HTTPS. Le navigateur le vérifie et la connexion est chiffrée.             | Certificat expiré ou nom incorrect.                        |
+| 5. La requête   | Le navigateur envoie une requête HTTP `GET /` pour demander la page d'accueil.                               | Requête incorrecte ou refusée.                             |
+| 6. La réponse   | Le serveur renvoie `200 OK` et la page HTML. Le navigateur l'affiche, puis demande les images et les styles. | Erreur HTTP `404`, `500`, etc.                             |
 
 ## Les codes de réponse HTTP
 
-| Code | Nom                   | Ce qu'il veut dire                  | Exemple que j'ai vu |
-| ---- | --------------------- | ----------------------------------- | ------------------- |
-| 200  | OK                    | La requête a réussi                 | Page affichée       |
-| 301  | Moved Permanently     | La page a changé d'adresse          | Redirection         |
-| 404  | Not Found             | La page demandée est introuvable    | Page introuvable    |
-| 500  | Internal Server Error | Le serveur rencontre une erreur     | Pas vu              |
+| Code | Nom                   | Ce qu'il veut dire               | Exemple que j'ai vu |
+| ---- | --------------------- | -------------------------------- | ------------------- |
+| 200  | OK                    | La requête a réussi              | Page affichée       |
+| 301  | Moved Permanently     | La page a changé d'adresse       | Redirection         |
+| 404  | Not Found             | La page demandée est introuvable | Page introuvable    |
+| 500  | Internal Server Error | Le serveur rencontre une erreur  | Pas vu              |
+
+## Les ports
+
+| Port | Service           | Exemple d'URL         |
+| ---- | ----------------- | --------------------- |
+| 80   | HTTP              | http://example.com    |
+| 443  | HTTPS             | https://github.com    |
+| 8000 | Serveur web local | http://localhost:8000 |
+
+## Diagnostiquer une erreur
+
+Les 4 questions, dans l'ordre :
+
+1. Le nom est-il trouvé ? → `nslookup <nom>`
+2. Le serveur écoute-t-il sur le bon port ? → `ss -tln`
+3. Le serveur répond-il ? → `curl -I <URL>`
+4. Le fichier demandé existe-t-il ? → `ls`
+
+### Exemple : une panne que j'ai réparée
+
+- **Symptôme :** La page À propos affiche une erreur 404.
+- **Étape :** Recherche du fichier demandé par le navigateur.
+- **Cause :** Le navigateur demande `a-propos.html`, mais le fichier s'appelle `apropos.html`.
+- **Correction :** `mv apropos.html a-propos.html`
+- **Vérification :** La page s'affiche et le journal du serveur indique le code 200.
